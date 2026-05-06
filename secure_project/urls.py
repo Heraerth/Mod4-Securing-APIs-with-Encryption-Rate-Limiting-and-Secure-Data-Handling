@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from payments.views import secure_login_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/login/', secure_login_view, name='secure_login'),
 ]
